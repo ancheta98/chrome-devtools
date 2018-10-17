@@ -1,0 +1,266 @@
+/* ariakeDark Theme v1.2.0
+ *
+ * https://github.com/zenorocha/ariakeula-theme
+ *
+ * Copyright 2015, All rights reserved
+ *
+ * Code licensed under the MIT license
+ * http://zenorocha.mit-license.org
+ *
+ * @author Zeno Rocha <hi@zenorocha.com>
+ * @author Jack Saunders <hi@zenorocha.com>
+ */
+@theme-type: dark;
+
+// ariakeDark Default Colours
+
+@ariake-bg : #2a2d37;
+@ariake-current-line: #403e54; //
+@ariake-selection : #646885; //
+@ariake-foreground : #ffffff; //
+@ariake-comment : #7FB3E1; //
+@ariake-cyan : #8af1ea;
+@ariake-green : #3F6E6B;
+@ariake-orange : #ffb86c;
+@ariake-pink : #ff7979;
+@ariake-purple : #DDA2F6; //
+@ariake-red : #AAACBC;
+@ariake-yellow : #BFF7F3;
+
+
+
+// Global Settings
+@text-height : 14px;
+@global-accent : @ariake-pink;
+@global-arrow : @ariake-foreground;
+@global-background: @ariake-bg;
+@global-boxshadow : rgba(17,17,17,.6);
+@global-divider : lighten(@global-background, 10%);
+@global-hover : lighten(@global-background, 10%);
+@global-input : #111;
+@global-toolbar : rgba(17,17,17,.6);
+@global-selected : @ariake-selection;
+@global-text : @ariake-foreground;
+@global-label : @ariake-comment;
+@global-warn : @ariake-yellow;
+@global-error : @ariake-red;
+@global-textshadow: darken(@global-background, 4%);
+
+// JavaScript
+@js-atom : @ariake-purple;
+@js-attribute : @ariake-foreground;
+@js-builtin : #8da6ce;
+@js-comment : @ariake-comment;
+@js-def : @ariake-green;
+@js-error : @ariake-red;
+@js-header : #ff6400;
+@js-hr : #aeaeae;
+@js-keyword : @ariake-pink;
+@js-link : #8da6ce;
+@js-meta : #d8fa3c;
+@js-number : @ariake-purple;
+@js-operator : @ariake-pink;
+@js-property : @ariake-cyan;
+@js-string : @ariake-yellow;
+@js-tag : @ariake-cyan;
+@js-variable : @ariake-cyan;
+@js-variable-2: @ariake-foreground;
+
+// JavaScript Objects
+@js-obj-array : #7c7c7c;
+@js-obj-boolean : #89f5a2;
+@js-obj-function : #8b6ccf;
+@js-obj-name : @ariake-cyan;
+@js-obj-number : @ariake-purple;
+@js-obj-preview : #ddd;
+@js-obj-regexp : @ariake-pink;
+@js-obj-string : @ariake-yellow;
+@js-obj-undefined: #ad4e4e;
+
+// CSS
+@css-at-rule : @ariake-pink;
+@css-atom : @ariake-purple;
+@css-builtin : @ariake-cyan;
+@css-comment : @ariake-comment;
+@css-def : @ariake-green;
+@css-important : @ariake-pink;
+@css-meta : @ariake-foreground;
+@css-number : @ariake-purple;
+@css-operator : @ariake-pink;
+@css-property : @ariake-cyan;
+@css-qualifier : @ariake-green;
+@css-string : @ariake-yellow;
+@css-string-2 : darken(@ariake-foreground, 10%);
+@css-tag : @ariake-green;
+@css-variable : @ariake-cyan;
+@css-variable-2: @ariake-cyan;
+
+// HTML Highlighting
+@xml-attribute : @ariake-green;
+@xml-comment : @ariake-comment;
+@xml-error : @ariake-red;
+@xml-iframe-root : @ariake-yellow;
+@xml-js-node : @ariake-comment;
+@xml-link : @ariake-yellow;
+@xml-pseudo : @ariake-green;
+@xml-pseudo-highlighted: @ariake-green;
+@xml-shadow-root : @ariake-orange;
+@xml-string : @ariake-yellow;
+@xml-tag : @ariake-pink;
+
+// Tabbed Header Configuration
+@tab-color-top : lighten(@global-background, 18%);
+@tab-color-bottom : lighten(@global-background, 8%);
+@tab-highlighted : @global-accent;
+@tab-label : #888;
+@tab-label-selected : @ariake-foreground;
+@tab-label-unsaved : @ariake-yellow;
+
+// Toolbars
+@toolbar-main: @global-background;
+@toolbar-sub: @global-background;
+@tab-main-icons-padding : 6px;
+@tab-main-toolbar-height: 34px;
+@tab-sub-icons-padding : 0;
+@tab-sub-toolbar-height: 25px;
+
+// Glyphs
+@glyph-active : @global-accent;
+@glyph-inactive: lighten(@global-background, 35%);
+
+// Crumbs
+@crumb-selected-background: @global-selected;
+@crumb-selected-text : @ariake-foreground;
+@crumb-text : @global-text;
+
+// Console
+@console-default-text: @global-text;
+@console-input-text : @ariake-foreground;
+@console-link : #888;
+
+// Dialog [Ctrl/Cmd + O | Ctrl/Cmd + Shift + O]
+@dialog-background : lighten(@global-background, 5%);
+@dialog-border : lighten(@global-background, 10%);
+@dialog-item-background: @global-background;
+@dialog-item-highlight : @global-accent;
+@dialog-item-text : lighten(@global-text, 10%);
+
+// Editor Properties
+@cm-cursor : @ariake-foreground;
+@cm-error : @ariake-red;
+@cm-gutter : lighten(@global-background, 4%);
+@cm-gutter-border : lighten(@global-background, 5%);
+@cm-gutter-lines : lighten(@global-background, 40%);
+@cm-matching-bracket : #15ca1a;
+@cm-nonmatching-bracket: #db0404;
+@cm-lines-no-sourcemap : lighten(@global-background, 1%);
+@cm-selected : lighten(@global-background, 10%);
+@cm-whitespace : lighten(@global-background, 5%);
+
+// Element Highlighter
+@eh-base-color : @global-selected;
+@eh-children-shadow : darken(@global-background, 10%);
+@eh-editing-outline : @global-accent;
+@eh-highlight-background: @selection-background;
+@eh-highlight-outline : @selection-border;
+@eh-hover-background : @hover-background;
+@eh-hover-outline : @hover-border;
+@eh-clipboard-selection : lighten(@global-background, 40%);
+
+// Elements Sidebar
+@style-edit-mode-selector-text: #999;
+@style-section : lighten(@global-background, 15%);
+@style-selector-text : #ccc;
+@style-separator : lighten(@global-background, 10%);
+@style-value : #ccc;
+
+// Filters
+@filter-background : lighten(@global-background,5%);
+@filter-text : @global-text;
+@filter-hover : lighten(@global-background, 10%);
+@filter-selected : lighten(@global-background, 15%);
+@filter-selected-text: lighten(@global-text, 15%);
+@filter-error : @global-error;
+@filter-warning : @ariake-yellow;
+@filter-info : @ariake-purple;
+@filter-log : @ariake-cyan;
+@filter-debug : @ariake-pink;
+@filter-verbose : @ariake-pink;
+
+// Find
+@find-header-background : lighten(@global-background, 3%);
+@find-header-text : #888;
+@find-highlight-background: @global-accent;
+@find-highlight-text : #000;
+
+// Forms
+@form-button-background: lighten(@global-background, 5%);
+@form-button-border : lighten(@global-background, 10%);
+@form-button-pressed : inset 0 1px 1px 0 darken(@global-background, 5%),
+	0 1px 1px 0 lighten(@global-background, 5%);
+@form-button-text : darken(@global-text, 10%);
+@form-input-background : lighten(@global-background, 5%);
+@form-input-border : lighten(@global-background, 10%);
+@form-input-text : lighten(@global-text, 10%);
+@form-label-text : @global-text;
+
+// Local Modifications
+@history-added-text : @ariake-green;
+@history-removed-text: @global-error;
+
+// Screencast
+@screencast-viewport : lighten(@global-background, 10%);
+@screencast-viewport-border: @global-accent;
+
+// Scrollbars
+@sb-thickness : 12px;
+@sb-thumb-border : darken(@global-background, 10%);
+@sb-thumb-color : lighten(@global-background, 20%);
+@sb-thumb-roundness: 8px;
+
+// Settings
+@settings-background : #444;
+@settings-border : #454545;
+@settings-delimiter : #eee;
+@settings-dialog : @ariake-comment;
+@settings-edit-background : #222;
+@settings-folder-background: #222;
+@settings-selected : rgba(150, 255, 150, 0.2);
+@settings-text : @ariake-comment;
+
+// Table/Sidebar Selections | Breakpoints
+@selection-background: @global-selected;
+@selection-border : lighten(@selection-background, 15%);
+@selection-text : lighten(@global-text, 10%);
+@hover-background: @global-hover;
+@hover-border : lighten(@hover-background, 10%);
+@hover-text : @global-text;
+
+// Sources Tab
+@sources-exception-all : #bf3131;
+@sources-exception-uncaught: #FDFD96;
+@sources-highlight-text : darken(@global-background, 4%);
+@sources-pane-background : rgba(0,0,0,.8);
+@sources-placeholder-text : #999;
+@sources-save-background : @global-background;
+@sources-text : @global-text;
+
+// Tables
+@table-primary : @global-background;
+@table-secondary: lighten(@global-background, 2%);
+
+// Timeline
+@timeline-expandable-border : lighten(@global-background, 35%);
+@timeline-graph-bar : rgba(200,200,200,.3);
+@timeline-graph-bar-background: rgba(200, 200, 200, 0.2);
+@timeline-overview-background : @global-background;
+@timeline-graph-selection : @global-accent;
+@timeline-progress-pane : fade(lighten(@global-background,30%), 50%);
+@timeline-resources-divider : lighten(@global-background, 3%);
+
+// Popovers
+@popover-background : @global-background;
+@popover-details-row-title: @ariake-cyan;
+@popover-details-title : @ariake-yellow;
+@popover-title : @ariake-pink;
+@popover-tree-border : #888;
